@@ -27,7 +27,7 @@ jquery template, 执行速度最快的javascript前端模板.
 
 </code></pre>
 
-#执行模板加载数据
+3、执行模板加载数据
 
 var render = $('#template').template().reader;
 
