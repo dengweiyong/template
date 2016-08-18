@@ -30,15 +30,10 @@ jquery template, 执行速度最快的javascript前端模板.
 3、执行模板加载数据
 
 <pre><code>
-var render = $('#template').template().reader;
-
-var data = [{userid:1, username:'un1',address:'xxxxx'},{userid:2, username:'un2', address: 'yyyyy'}];
-
-var table = $('#table');
-
-$.each(data, function(){
-
-  table.append(reader(this));
-  
-});
+    var render = $('#template').template().reader;
+    var data = [{userid:1, username:'un1',address:'xxxxx'},{userid:2, username:'un2', address: 'yyyyy'}];
+    var table = $('#table');
+    $.each(data, function(){
+      table.append(reader(this));
+    });
 <pre><code>
