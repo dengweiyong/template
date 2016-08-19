@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>template demo</title>
+    <script src="../../js/jquery-2.2.3.min.js"></script>
+    <script src="template.js"></script>
+</head>
+<body>
+    <div style="width:900px; margin:0 auto">
+        <h1>template demo</h1>
+        <table id="table">
+            <tr>
+                <th>帐号</th><th>姓名</th><th>地址</th>
+            </tr>
+            <script id="template" type="text/template">
+            <tr>
+                <td>{userid}</td><td>{username}</td><td>{address}</td>
+            </tr>
+            </script>
+        </table>
+    </div>
+    <script>
+        var data = [{ userid: 1, username: 'u1', address: 'xxx1' }, { userid: 21, username: 'u3', address: 'yyyy' }];
+
+        var render = $('#template').template().render;
+
+        $.each(data, function () {
+            $('#table').append(render(this));
+        })
+    </script>
+</body>
+</html>
